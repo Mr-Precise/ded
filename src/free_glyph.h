@@ -2,7 +2,7 @@
 #define FREE_GLYPH_H_
 
 #include <stdlib.h>
-#include "./la.h"
+#include "la.h"
 
 #define GLEW_STATIC
 #include <GL/glew.h>

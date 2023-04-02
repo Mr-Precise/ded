@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
-#include "./la.h"
+#include "la.h"
 
 #define SCREEN_WIDTH 800
 #define SCREEN_HEIGHT 600

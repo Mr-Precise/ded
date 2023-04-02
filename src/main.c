@@ -13,14 +13,14 @@
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
-#include "./editor.h"
-#include "./file_browser.h"
-#include "./la.h"
-#include "./free_glyph.h"
-#include "./simple_renderer.h"
-#include "./common.h"
-#include "./lexer.h"
-#include "./sv.h"
+#include "editor.h"
+#include "file_browser.h"
+#include "la.h"
+#include "free_glyph.h"
+#include "simple_renderer.h"
+#include "common.h"
+#include "lexer.h"
+#include "sv.h"
 
 // TODO: Save file dialog
 // Needed when ded is ran without any file so it does not know where to save.

@@ -9,7 +9,7 @@
 #define GL_GLEXT_PROTOTYPES
 #include <SDL2/SDL_opengl.h>
 
-#include "./la.h"
+#include "la.h"
 
 typedef enum {
     UNIFORM_SLOT_TIME = 0,

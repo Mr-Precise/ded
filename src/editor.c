@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <errno.h>
 #include <string.h>
-#include "./editor.h"
-#include "./common.h"
+#include "editor.h"
+#include "common.h"
 
 void editor_backspace(Editor *e)
 {

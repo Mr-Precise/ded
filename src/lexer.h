@@ -2,8 +2,8 @@
 #define LEXER_H_
 
 #include <stddef.h>
-#include "./la.h"
-#include "./free_glyph.h"
+#include "la.h"
+#include "free_glyph.h"
 
 typedef enum {
     TOKEN_END = 0,

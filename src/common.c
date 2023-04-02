@@ -15,7 +15,7 @@
 
 #include "common.h"
 #define ARENA_IMPLEMENTATION
-#include "./arena.h"
+#include "arena.h"
 #define SV_IMPLEMENTATION
 #include "sv.h"
 
