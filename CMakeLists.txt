@@ -22,3 +22,6 @@ target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES} ${GLEW_LIBRARIES} ${FREE
 # if(MINGW OR WIN32)
 #     target_link_libraries(${PROJECT_NAME} imm32 winmm version setupapi hid)
 # endif(MINGW OR WIN32)
+
+file(COPY ${PROJECT_SOURCE_DIR}/shaders/ DESTINATION ${CMAKE_BINARY_DIR}/shaders)
+file(COPY ${PROJECT_SOURCE_DIR}/fonts/ DESTINATION ${CMAKE_BINARY_DIR}/fonts)
