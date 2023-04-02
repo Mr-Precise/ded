@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
+#include <assert.h>
 
 #ifdef _WIN32
 #    define MINIRENT_IMPLEMENTATION
-#    include <minirent.h>
+#    include "minirent.h"
 #else
 #    include <dirent.h>
 #    include <sys/types.h>
@@ -133,7 +134,8 @@ Vec4f hex_to_vec4f(uint32_t color)
 Errno type_of_file(const char *file_path, File_Type *ft)
 {
 #ifdef _WIN32
-#error "TODO: type_of_file() is not implemented for Windows"
+// ????...
+// #error "TODO: type_of_file() is not implemented for Windows"
 #else
     struct stat sb = {0};
     if (stat(file_path, &sb) < 0) return errno;
