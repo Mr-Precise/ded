@@ -6,7 +6,8 @@ void free_glyph_atlas_init(Free_Glyph_Atlas *atlas, FT_Face face)
 {
     // TODO: Introduction of SDF font slowed down the start up time
     // We need to investigate what's up with that
-    FT_Int32 load_flags = FT_LOAD_RENDER | FT_LOAD_TARGET_(FT_RENDER_MODE_SDF);
+    // FT_RENDER_MODE_SDF missing on ubuntu 20.04, workaround FT_RENDER_MODE_NORMAL
+    FT_Int32 load_flags = FT_LOAD_RENDER | FT_LOAD_TARGET_(FT_RENDER_MODE_NORMAL);
     for (int i = 32; i < 128; ++i) {
         if (FT_Load_Char(face, i, load_flags)) {
             fprintf(stderr, "ERROR: could not load glyph of a character with code %d\n", i);
