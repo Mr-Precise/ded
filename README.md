@@ -9,11 +9,11 @@ soon
 ## Linux
 Debian/Ubuntu:
 ```
-sudo apt install build-essential sdl2 pkg-config cmake git
+sudo apt install build-essential cmake git
 ```
 Arch/Manjaro:  
 ```
-pacman -S git cmake sdl2 pkgconf
+pacman -S git cmake
 ```
 ## Windows
 [Visual Studio](https://visualstudio.microsoft.com/)  
@@ -21,7 +21,7 @@ pacman -S git cmake sdl2 pkgconf
 
 ## macOS
 ```
-brew install pkg-config cmake sdl2
+brew install git cmake
 ```
 ---
 # Clone repo
