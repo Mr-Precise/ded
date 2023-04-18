@@ -441,13 +441,14 @@ int Main(int argc, char **argv)
 }
 
 #ifdef _WIN32
-
+#if defined(_MSC_VER)
+#else
 #include <Windows.h>
-
 int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmdshow)
 {
     return Main(__argc, __argv);
 }
+#endif
 
 #endif
 
