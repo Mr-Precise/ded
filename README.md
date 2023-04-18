@@ -17,7 +17,8 @@ pacman -S git cmake
 ```
 ## Windows
 [Visual Studio](https://visualstudio.microsoft.com/)  
-[CMake](https://cmake.org/download/)
+[CMake](https://cmake.org/download/)  
+[git](https://github.com/git-for-windows/git/releases/latest)
 
 ## macOS
 ```
