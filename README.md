@@ -3,29 +3,71 @@
 **THIS SOFTWARE IS UNFINISHED!!! Don't have any high expectations.**
 
 # Quick Start
+soon
 
-## Dependencies
+# Build dependencies
+## Linux
+Debian/Ubuntu:
+```
+sudo apt install build-essential sdl2 pkg-config cmake git
+```
+Arch/Manjaro:  
+```
+pacman -S git cmake sdl2 pkgconf
+```
+## Windows
+[Visual Studio](https://visualstudio.microsoft.com/)  
+[CMake](https://cmake.org/download/)
 
-- [SDL2 2.0.9+](https://www.libsdl.org/)
-- [FreeType 2.13.0+](https://freetype.org/)
-- [GLEW 2.1.0+](https://glew.sourceforge.net/)
+## macOS
+```
+brew install pkg-config cmake sdl2
+```
+---
+# Clone repo
 
-## POSIX
+```
+git clone --recursive https://github.com/Mr-Precise/ded
 
+cd ded
+```
+---
+# Build
+### Linux/macOS
+```
+mkdir build && cd build  
+cmake ..
+```
+```
+make -j$(($(nproc) + 1))
+```
+or build using cmake:
+```
+cmake --build . --config Release
+```
+
+### (old/deprecated) build script:
 ```console
 $ ./build.sh
 $ ./ded src/main.c
 ```
 
-## Windows MSVC
-
+### MSVC (old/deprecated build script)
 ```console
 > .\setup_dependencies.bat
 > .\build_msvc.bat
 > .\ded.exe src\main.c
 ```
+---
+# Used dependencies
 
-# Fonts
+### Libs
+
+- [SDL2 2.0.9+](https://www.libsdl.org/)
+- [FreeType 2.13.0+](https://freetype.org/)
+- [GLEW 2.1.0+](https://glew.sourceforge.net/)
+
+### Fonts
 
 - Victor Mono: https://rubjo.github.io/victor-mono/
 - Iosevka: https://github.com/be5invis/Iosevka
