@@ -55,8 +55,7 @@ static File_Browser fb = {0};
 // TODO: display errors reported via flash_error right in the text editor window somehow
 #define flash_error(...) do { fprintf(stderr, __VA_ARGS__); fprintf(stderr, "\n"); } while(0)
 
-
-int main(int argc, char **argv)
+int Main(int argc, char **argv)
 {
     Errno err;
 
@@ -439,6 +438,22 @@ int main(int argc, char **argv)
     }
 
     return 0;
+}
+
+#ifdef _WIN32
+
+#include <Windows.h>
+
+int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmdshow)
+{
+    return Main(__argc, __argv);
+}
+
+#endif
+
+int main(int argc, char** argv)
+{
+    return Main(argc, argv);
 }
 
 // TODO: ability to search within file browser
