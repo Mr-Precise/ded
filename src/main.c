@@ -136,8 +136,9 @@ int Main(int argc, char **argv)
         return 1;
     }
 
-    if (GLEW_OK != glewInit()) {
-        fprintf(stderr, "ERROR: Could not initialize GLEW!");
+    GLenum glewErr = glewInit();
+    if (GLEW_OK != glewErr) {
+        fprintf(stderr, "ERROR: Could not initialize GLEW: %s\n", glewGetErrorString(glewErr));
         return 1;
     }
 
